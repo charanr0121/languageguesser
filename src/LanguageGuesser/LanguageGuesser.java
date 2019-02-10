@@ -1,5 +1,7 @@
+package LanguageGuesser;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Scanner;
 import java.io.File;
 
@@ -15,21 +17,23 @@ public class LanguageGuesser {
     double[][] frenMat;
     double[][] spanMat;
     public LanguageGuesser(){
-        englishText = new File("/Users/charan/Language/tests/English.txt");
+        englishText = new File("tests/English.txt");
         System.out.println("Training for English... ");
         eng = parseTxt(englishText);
         engMat = initMatrix(eng);
         //System.out.println("English: " + eng);
-        frenchText = new File("/Users/charan/Language/tests/French.txt");
+
+        frenchText = new File("tests/French.txt");
         System.out.println("Training for French... ");
         fren = parseTxt(frenchText);
         frenMat = initMatrix(fren);
         //System.out.println("French: " + fren);
-        spanishText = new File("/Users/charan/Language/tests/Spanish.txt");
+
+        spanishText = new File("tests/Spanish.txt");
         System.out.println("Training for Spanish... \n");
         span = parseTxt(spanishText);
         spanMat = initMatrix(span);
-        //  System.out.println("Spanish: " + span);
+        //System.out.println("Spanish: " + span);
 
 
     }
